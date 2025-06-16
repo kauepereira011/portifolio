@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - Kaue Pereira</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background-color: #111;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 10;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #c1a15e;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      background: none;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 10px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #333;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 20px 0;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 40px 40px;
+    }
+
+    h1, h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #f5f5f5;
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .highlight {
+      color: #c1a15e;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      font-size: 14px;
+    }
+
+    section:target {
+      animation: focus 0.5s ease;
+    }
+
+    @keyframes focus {
+      0% { transform: scale(1); background-color: #111; }
+      50% { transform: scale(1.02); background-color: #1a1a1a; }
+      100% { transform: scale(1); background-color: #111; }
+    }
+
+    .voltar {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #c1a15e;
+      color: #111;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .voltar:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    form button {
+      padding: 10px;
+      background-color: #c1a15e;
+      color: #111;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 120px 20px 40px;
+      }
+
+      img {
+        width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body id="topo">
+
+  <nav>
+    <div class="logo">Kaue</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="menu-list">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#formacao">Curso</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <section id="inicio" class="hero">
+    <h1>Kaue Pereira</h1>
+    <p><span class="highlight">Estudante de Técnico em Administração</span> e entusiasta da tecnologia</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <img src="400x245.svg" alt="Foto de Kaue" style="width: 200px; border-radius: 12px;">
+      <p>Tenho 15 anos e sou estudante do Ensino Médio Técnico em Administração. Curto muito aprender coisas novas,
+        principalmente relacionadas à tecnologia, marketing, design e desenvolvimento web. Meus projetos mostram minha vontade
+        de crescer e criar coisas úteis de forma simples.</p>
+    </div>
+  </section>
+
+  <section id="formacao">
+    <h2>Meu Curso</h2>
+    <p>Atualmente estou cursando o Ensino Médio integrado ao Técnico de Administração. Ao longo do curso, estou desenvolvendo noções de:</p>
+    <ul>
+      <li>Planejamento estratégico</li>
+      <li>Gestão de empresas e processos</li>
+      <li>Organização financeira e administrativa</li>
+      <li>Marketing e comportamento do consumidor</li>
+      <li>Legislação Empresarial</li>
+    </ul>
+  </section>
+
+  <section id="habilidades">
+    <h2>Minhas Habilidades</h2>
+    <ul>
+      <li>HTML e CSS (nível iniciante/intermediário)</li>
+      <li>Noções de design responsivo</li>
+      <li>Pacote Office (Word, Excel, PowerPoint)</li>
+      <li>Organização e planejamento</li>
+      <li>Arduino com C/C++</li>
+      <li>Facilidade com ferramentas digitais</li>
+      <li>Comunicação e trabalho em equipe</li>
+    </ul>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos Pessoais</h2>
+    <ul>
+      <li><strong>Portfólio Web:</strong> este site que você está navegando agora</li>
+      <li><strong>Skez Store:</strong> Loja de roupas streetwear com visual minimalista</li>
+      <li><strong>Restaurante Ratatouille:</strong> Site com foco em comida francesa</li>
+      <li><strong>Pure Naruralle:</strong> Marca de cuidados com a pele para mulheres 40+</li>
+      <li><strong>Mini site de currículo:</strong> currículo interativo com HTML e CSS</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Comigo</h2>
+    <p>Quer trocar uma ideia, sugerir algo ou propor uma parceria?</p>
+    <ul>
+      <li><strong>Email:</strong> kauepereiraa77@gmail.com</li>
+      <li><strong>Instagram:</strong> @kaue_zz9</li>
+      <li><strong>Telefone:</strong> (00) 90000-0000</li>
+      <li><strong>GitHub:</strong> https://github.com/kauepereiraa011</li>
+    </ul>
+
+    <form action="#" method="POST" style="margin-top: 30px; max-width: 500px; display: flex; flex-direction: column; gap: 15px;">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <input type="text" name="assunto" placeholder="Assunto">
+      <textarea name="mensagem" placeholder="Digite sua mensagem aqui..." required rows="5"></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <br>
+    <a href="#inicio" class="voltar">↑ Voltar ao início</a>
+  </section>
+
+  <div class="footer">
+    Feito por mim — 2025
+  </div>
+
+  <script>
+    // Scroll suave
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Fecha o menu após clicar em link (modo mobile)
+        document.getElementById('menu-list').classList.remove('show');
+      });
+    });
+
+    // Botão para abrir/fechar o menu (mobile)
+    function toggleMenu() {
+      document.getElementById('menu-list').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
